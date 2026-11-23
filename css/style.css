@@ -1,0 +1,543 @@
+/* ---------- Variáveis: tema claro ---------- */
+:root {
+  color-scheme: light;
+
+  --color-primary: #C76B8A;
+  --color-page: #FFF6F8;
+  --color-card: #FFFFFF;
+  --color-text: #49313B;
+  --color-card-text: #684B57;
+  --color-button: #C76B8A;
+  --color-button-text: #FFFFFF;
+  --color-accent: #A7476B;
+
+  --font-title: "Cormorant Garamond", Georgia, serif;
+  --font-body: "Nunito", "Segoe UI", sans-serif;
+
+  --radius: 1rem;
+  --gap: 1.5rem;
+}
+
+/* ---------- Variáveis: tema escuro ---------- */
+:root[data-theme="dark"] {
+  color-scheme: dark;
+
+  --color-primary: #E58AAA;
+  --color-page: #21151D;
+  --color-card: #33212D;
+  --color-text: #F8EAF0;
+  --color-card-text: #E8CED9;
+  --color-button: #E58AAA;
+  --color-button-text: #291722;
+  --color-accent: #F0A5C0;
+}
+
+/* ---------- Base ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-padding-top: 8rem;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-page);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  line-height: 1.65;
+  overflow-wrap: break-word;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0 0 0.75rem;
+  color: var(--color-text);
+  font-family: var(--font-title);
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.1rem;
+}
+
+h3 {
+  font-size: 1.7rem;
+}
+
+p {
+  margin: 0 0 1rem;
+}
+
+ul,
+ol {
+  margin: 0 0 1rem;
+  padding-left: 1.4rem;
+}
+
+li {
+  margin-bottom: 0.4rem;
+}
+
+li::marker {
+  color: var(--color-accent);
+  font-weight: 700;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: var(--color-accent);
+  font-weight: 700;
+  text-underline-offset: 0.2em;
+}
+
+a:hover {
+  text-decoration-thickness: 0.15em;
+}
+
+:focus-visible {
+  outline: 0.2rem solid var(--color-accent);
+  outline-offset: 0.2rem;
+}
+
+main section {
+  margin-bottom: 2.5rem;
+}
+
+.container {
+  width: 100%;
+  max-width: 68rem;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+
+main.container {
+  padding-block: 2.5rem;
+}
+
+.skip-link {
+  position: absolute;
+  top: -10rem;
+  left: 1rem;
+  z-index: 2;
+  padding: 0.6rem 1rem;
+  background-color: var(--color-card);
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+/* ---------- Cabeçalho, menu e rodapé ---------- */
+.site-header,
+.site-nav {
+  background-color: var(--color-primary);
+}
+
+.site-header :focus-visible,
+.site-nav :focus-visible {
+  outline-color: var(--color-button-text);
+}
+
+.header-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem var(--gap);
+  padding-block: 1.1rem 0.6rem;
+}
+
+.site-title {
+  color: var(--color-button-text);
+  font-family: var(--font-title);
+  font-size: 2.3rem;
+  line-height: 1.1;
+  text-decoration: none;
+}
+
+.reading-tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.reading-tools button {
+  border-color: var(--color-button-text);
+}
+
+.site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  margin-top: -0.0625rem;
+  padding-block: 0.4rem;
+}
+
+.menu,
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.menu li,
+.social-links li {
+  margin: 0;
+}
+
+.menu a {
+  display: block;
+  padding: 0.25rem 0.8rem;
+  border-radius: 2rem;
+  color: var(--color-button-text);
+  font-size: 1.3rem;
+  text-decoration: none;
+}
+
+.menu a:hover {
+  text-decoration: underline;
+}
+
+.menu a[aria-current] {
+  background-color: var(--color-card);
+  color: var(--color-accent);
+}
+
+.site-footer {
+  border-top: 0.25rem solid var(--color-primary);
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem var(--gap);
+  padding-block: 1.5rem;
+}
+
+.footer-content p {
+  margin: 0;
+}
+
+.social-links {
+  gap: 1rem;
+}
+
+/* ---------- Botões ---------- */
+button,
+.button {
+  display: inline-block;
+  padding: 0.4rem 1.1rem;
+  border: 0.125rem solid var(--color-button);
+  border-radius: 2rem;
+  background-color: var(--color-button);
+  color: var(--color-button-text);
+  font-family: inherit;
+  font-size: 1.3rem;
+  font-weight: 700;
+  line-height: 1.4;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button:hover,
+.button:hover {
+  background-color: var(--color-accent);
+}
+
+button:disabled {
+  background-color: var(--color-button);
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+/* ---------- Peças usadas em várias páginas ---------- */
+.card {
+  padding: 1.75rem;
+  border-radius: var(--radius);
+  background-color: var(--color-card);
+  box-shadow: 0 0.25rem 1.25rem rgb(73 49 59 / 0.1);
+  color: var(--color-card-text);
+}
+
+.card > :last-child {
+  margin-bottom: 0;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 19rem), 1fr));
+  gap: var(--gap);
+  padding: 0;
+  list-style: none;
+}
+
+.card-grid-wide {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 24rem), 1fr));
+}
+
+.card-grid > li {
+  margin: 0;
+}
+
+.label {
+  margin-bottom: 0.5rem;
+  color: var(--color-accent);
+  font-weight: 700;
+}
+
+.intro {
+  max-width: 48rem;
+  margin-bottom: 1.75rem;
+  font-size: 1.15rem;
+}
+
+/* ---------- Home ---------- */
+.hero {
+  padding: 3rem 2.5rem;
+  border-radius: var(--radius);
+  background: var(--color-card) url("../assets/watercolor.svg") no-repeat right center / 42% auto;
+  color: var(--color-card-text);
+}
+
+.hero > * {
+  max-width: 56%;
+}
+
+.hero p {
+  font-size: 1.15rem;
+}
+
+.hero > :last-child {
+  margin-bottom: 0;
+}
+
+.home-layout,
+.contact-layout,
+.recipe-layout {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: var(--gap);
+}
+
+.home-layout > :first-child,
+.contact-layout > :first-child {
+  flex: 2 1 24rem;
+}
+
+.home-layout > :last-child,
+.contact-layout > :last-child {
+  flex: 1 1 15rem;
+}
+
+.feed {
+  display: grid;
+  gap: var(--gap);
+}
+
+.feed > h2 {
+  margin: 0;
+}
+
+.post-date {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+/* ---------- Sobre Mim ---------- */
+.about-layout {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 2.5rem;
+}
+
+.about-layout > :last-child {
+  flex: 2 1 24rem;
+}
+
+.portrait {
+  flex: 1 1 15rem;
+  max-width: 22rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.portrait img {
+  display: block;
+  border: 0.4rem solid var(--color-primary);
+  border-radius: 50% 50% var(--radius) var(--radius);
+}
+
+.portrait figcaption {
+  margin-top: 0.6rem;
+}
+
+/* ---------- Currículo ---------- */
+.table-wrapper {
+  margin-bottom: 1rem;
+  overflow-x: auto;
+  border-radius: var(--radius);
+  background-color: var(--color-card);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  color: var(--color-card-text);
+  text-align: left;
+}
+
+th,
+td {
+  padding: 0.75rem 1.1rem;
+}
+
+thead th {
+  background-color: var(--color-primary);
+  color: var(--color-button-text);
+  font-size: 1.3rem;
+}
+
+tbody tr + tr {
+  border-top: 0.0625rem solid var(--color-primary);
+}
+
+/* ---------- Contato ---------- */
+fieldset {
+  min-width: 0;
+  margin: 0 0 1.25rem;
+  padding: 0;
+  border: 0;
+}
+
+legend {
+  margin-bottom: 0.5rem;
+  padding: 0;
+  color: var(--color-accent);
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.field {
+  margin-bottom: 1rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-weight: 700;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.65rem 0.8rem;
+  border: 0.125rem solid var(--color-primary);
+  border-radius: 0.6rem;
+  background-color: var(--color-page);
+  color: var(--color-text);
+  font: inherit;
+}
+
+textarea {
+  resize: vertical;
+}
+
+[aria-invalid="true"] {
+  border: 0.2rem solid var(--color-accent);
+}
+
+.error-message,
+.success-message {
+  margin: 0.25rem 0 0;
+  color: var(--color-accent);
+  font-weight: 700;
+}
+
+.success-message {
+  margin-top: 1rem;
+}
+
+/* ---------- Mousse de Maracujá ---------- */
+.recipe-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--gap);
+  margin-bottom: 2rem;
+}
+
+.recipe-layout > :first-child {
+  flex: 1 1 17rem;
+}
+
+.recipe-layout > :last-child {
+  flex: 2 1 22rem;
+}
+
+.quote {
+  margin: 0;
+  padding-left: 1.25rem;
+  border-left: 0.25rem solid var(--color-primary);
+}
+
+.quote blockquote {
+  margin: 0;
+  font-family: var(--font-title);
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+
+.quote p {
+  margin-bottom: 0.25rem;
+}
+
+/* ---------- Telas pequenas ---------- */
+@media (max-width: 40rem) {
+  h1 {
+    font-size: 2.4rem;
+  }
+
+  .site-title {
+    font-size: 2rem;
+  }
+
+  .menu {
+    justify-content: center;
+  }
+
+  .menu a {
+    padding-inline: 0.6rem;
+  }
+
+  .hero {
+    padding: 2rem 1.5rem 13rem;
+    background-position: center bottom;
+    background-size: 18rem auto;
+  }
+
+  .hero > * {
+    max-width: none;
+  }
+}
