@@ -286,6 +286,7 @@ button:disabled {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 19rem), 1fr));
   gap: var(--gap);
+  margin-bottom: 2.5rem;
   padding: 0;
   list-style: none;
 }
@@ -478,7 +479,7 @@ textarea {
   margin-top: 1rem;
 }
 
-/* ---------- Mousse de Maracujá ---------- */
+/* ---------- Receitas ---------- */
 .recipe-header {
   display: flex;
   flex-wrap: wrap;
@@ -494,23 +495,6 @@ textarea {
 
 .recipe-layout > :last-child {
   flex: 2 1 22rem;
-}
-
-.quote {
-  margin: 0;
-  padding-left: 1.25rem;
-  border-left: 0.25rem solid var(--color-primary);
-}
-
-.quote blockquote {
-  margin: 0;
-  font-family: var(--font-title);
-  font-size: 1.7rem;
-  font-weight: 600;
-}
-
-.quote p {
-  margin-bottom: 0.25rem;
 }
 
 /* ---------- Telas pequenas ---------- */
