@@ -527,8 +527,15 @@ textarea {
     justify-content: center;
   }
 
+  /* O limite de 6.5vw impede que o menu fixo cubra a tela com a fonte em 150%. */
   .menu a {
-    padding-inline: 0.6rem;
+    padding-inline: 0.5rem;
+    font-size: min(1.3rem, 6.5vw);
+  }
+
+  th,
+  td {
+    padding: 0.6rem 0.35rem;
   }
 
   .hero {
