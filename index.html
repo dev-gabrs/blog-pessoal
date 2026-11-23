@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Blog da Gabinha: computação, jogos e receitas doces.">
+  <title>Home | Blog da Gabinha</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&amp;family=Nunito:wght@400;700&amp;display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#content">Pular para o conteúdo</a>
+
+  <header class="site-header">
+    <div class="container header-content">
+      <a class="site-title" href="index.html">Blog da Gabinha</a>
+      <div class="reading-tools" role="group" aria-label="Ferramentas de leitura">
+        <button type="button" id="theme-toggle">Modo noturno</button>
+        <button type="button" id="font-decrease" aria-label="Diminuir a fonte">A-</button>
+        <button type="button" id="font-increase" aria-label="Aumentar a fonte">A+</button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="site-nav" aria-label="Menu principal">
+    <div class="container">
+      <ul class="menu">
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="about.html">Sobre Mim</a></li>
+        <li><a href="curriculum.html">Currículo</a></li>
+        <li><a href="receitas.html">Receitas</a></li>
+        <li><a href="contact.html">Contato</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="content" class="container">
+    <section class="hero">
+      <h1>Oi, eu sou a Gabriela</h1>
+      <p>Este é o meu cantinho na internet. Estudo Ciência da Computação na UPF e, por aqui, misturo as coisas de que eu gosto: tecnologia, jogos e doces.</p>
+      <p><a class="button" href="about.html">Conheça a minha história</a></p>
+    </section>
+
+    <div class="home-layout">
+      <section class="feed" aria-labelledby="feed-title">
+        <h2 id="feed-title">Últimas Postagens</h2>
+
+        <article class="card">
+          <p class="label">Jogos</p>
+          <h3>The Witcher 3: meu vício do momento</h3>
+          <p class="post-date">[EXEMPLO] <time datetime="2026-11-20">20 de novembro de 2026</time></p>
+          <p>Estou viciada em The Witcher 3, o RPG em que a gente joga com o bruxo Geralt de Rívia. [EXEMPLO] Aqui entram as minhas impressões e a parte da história em que estou.</p>
+        </article>
+
+        <article class="card">
+          <p class="label">Jogos</p>
+          <h3>Elden Ring e as Terras Intermédias</h3>
+          <p class="post-date">[EXEMPLO] <time datetime="2026-11-13">13 de novembro de 2026</time></p>
+          <p>Elden Ring é um RPG de ação em mundo aberto da FromSoftware, conhecido pelos chefes difíceis. [EXEMPLO] Aqui entra a minha opinião sobre o jogo e o chefe que mais me marcou.</p>
+        </article>
+
+        <article class="card">
+          <p class="label">Receitas</p>
+          <h3>Mousse de maracujá para adoçar a semana</h3>
+          <p class="post-date">[EXEMPLO] <time datetime="2026-11-06">6 de novembro de 2026</time></p>
+          <p>Uma sobremesa deliciosa e fácil de fazer, batida no liquidificador e servida bem gelada.</p>
+          <p><a href="passion-fruit-mousse.html">Ver a receita da Mousse de Maracujá</a></p>
+        </article>
+      </section>
+
+      <aside class="card" aria-labelledby="now-title">
+        <h2 id="now-title">No momento</h2>
+        <ul>
+          <li><strong>Jogando:</strong> The Witcher 3</li>
+          <li><strong>Ouvindo:</strong> música, o tempo todo</li>
+          <li><strong>Estudando:</strong> Ciência da Computação</li>
+          <li><strong>Trabalhando com:</strong> T.I. e automações com IA</li>
+        </ul>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>Feito por Gabriela para a disciplina de Desenvolvimento para Web (Web Lab), UPF, 2026.</p>
+      <ul class="social-links">
+        <li><a href="https://github.com/dev-gabrs">GitHub</a></li>
+        <li><a href="https://www.instagram.com/gabriela.toldo_/">Instagram</a></li>
+        <li><a href="mailto:gabrielatoldo1@gmail.com">E-mail</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>
